@@ -1,0 +1,69 @@
+<template>
+  <!-- Begin by creating card for the LWC itself. -->
+  <lightning-card>
+    <!-- The header for the component includes a standard lightning icon and h1 formatted text. -->
+    <!-- Header-->
+    <h1>
+      <lightning-icon icon-name="standard:scheduling_policy" size="medium"></lightning-icon
+      ><b>&emsp;Contact Birthday Tracker - LWC</b>
+    </h1>
+    <!-- Both of the lightning-datatables we work with below are contained within a <div>. -->
+    <!-- Data Tables-->
+    <div class="slds-m-around_medium">
+      <template if:true={today.data}>
+        <!-- First part of the component intended to show today's birthdays.-->
+        <!-- Header for Today's Birthdays section -->
+        <div class="slds-m-around_small">
+          <h2><b>Today's Birthdays</b></h2>
+        </div>
+        <!-- lightning-datatable for Today's Birthdays -->
+        <lightning-datatable
+          class="slds-m-top_medium zoom-in slds-table slds-no-row-hover slds-table_bordered"
+          key-field="id"
+          data={today.data}
+          columns={columns}
+          max-row-selection="3"
+          hide-checkbox-column
+          resize-column-disabled="True"
+          default-sort-direction="asc"
+        >
+        </lightning-datatable>
+      </template>
+      <!-- Second part of the component intended to show upcoming birthdays.-->
+      <!-- Some of the formatting below could be simplified, with the extra lightning-card section removed.-->
+      <lightning-card>
+        <template if:true={upcoming.data}>
+          <!-- Header for Upcoming Birthdays section -->
+          <div class="slds-m-around_small">
+            <h2><b>Upcoming Birthdays</b></h2>
+          </div>
+          <!-- lightning-datatable for Upcoming Birthdays -->
+          <lightning-datatable
+            class="slds-m-top_medium zoom-in slds-table slds-no-row-hover slds-table_bordered"
+            key-field="id"
+            data={upcoming.data}
+            columns={columns}
+            max-row-selection="3"
+            hide-checkbox-column
+            resize-column-disabled="True"
+            default-sort-direction="asc"
+          >
+          </lightning-datatable>
+          <!-- Closing out the various sections used above. -->
+        </template>
+      </lightning-card>
+    </div>
+    <!-- Basic contact information is included in the footer along with a thank you note.-->
+    <!-- Footer -->
+    <h3>
+      Contact us at 
+      <lightning-formatted-email
+        value="info@chesapeakeapps.com"
+        hide-icon
+      ></lightning-formatted-email>
+       &nbsp;with any questions or feedback.
+    </h3>
+    <h3>Thank you for using the Chesapeake Apps Birthday LWC!</h3>
+    <!-- And thank you for taking the time to read through this code!-->
+  </lightning-card>
+</template>
