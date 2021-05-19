@@ -1,5 +1,5 @@
-# bday
-Contact Birthday Tracker LWC for use with Salesforce Lightning Experience.
+# Contact Birthday Tracker LWC - Open Source Lightning Web Component
+Contact Birthday Tracker LWC for use with Salesforce Lightning Experience. The component's main purpose is to track current and upcoming birthdays for Salesforce contacts.
 
 Source code is provided here on GitHub, free and available for other developers to improve and use for their own purposes.
 
