@@ -3,7 +3,7 @@ Contact Birthday Tracker LWC for use with Salesforce Lightning Experience. The c
 
 Source code is provided here on GitHub, free and available for other developers to improve and use for their own purposes.
 
-The .cls files are intended to be added as Apex Classes within the installation org. CSS, HTML, JS, and JS-XML are for the LWC.
+The .cls files are intended to be added as Apex Classes within the installation org. CSS, HTML, JS, and JS-meta.XML are for the LWC.
 
 For any questions or inquiries, please contact info@chesapeakeapps.com.
 
