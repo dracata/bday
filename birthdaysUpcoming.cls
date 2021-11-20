@@ -31,8 +31,8 @@ public with sharing class birthdaysUpcoming {
                     displayList.add(c);
                         }
             }  
-            //The returned data is limited to 5 contacts for aesthetics.
-            if(displayList.size() == 5)
+            //The returned data is limited to 100 contacts for aesthetics.
+            if(displayList.size() == 100)
             {
                 break;
             }
@@ -62,8 +62,8 @@ public with sharing class birthdaysUpcoming {
             {
                 displayList.add(c);
             }
-            //The returned data is limited to 5 contacts for aesthetics.
-            if(displayList.size() == 5)
+            //The returned data is limited to 100 contacts for aesthetics.
+            if(displayList.size() == 100)
             {
                 break;
             }
